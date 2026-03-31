@@ -16,7 +16,7 @@ class UtilisateurAdmin(UserAdmin):
             'fields': ('nom', 'telephone', 'type_utilisateur', 'date_creation')
         }),
     )
-    list_display = ('username', 'email', 'nom', 'type_utilisateur', 'date_creation')
+    list_display = ('username', 'email', 'nom', 'telephone', 'type_utilisateur', 'date_creation')
     list_filter = ('type_utilisateur', 'date_creation', 'is_staff')
     search_fields = ('username', 'email', 'nom', 'first_name', 'last_name')
     readonly_fields = ('date_creation',)
@@ -29,7 +29,7 @@ class ChercheurAdmin(UserAdmin):
             'fields': ('nom', 'telephone', 'date_creation')
         }),
     )
-    list_display = ('username', 'email', 'nom', 'date_creation')
+    list_display = ('username', 'email', 'nom', 'telephone', 'date_creation')
     list_filter = ('date_creation',)
     search_fields = ('username', 'email', 'nom', 'first_name', 'last_name')
     readonly_fields = ('date_creation',)
@@ -42,7 +42,7 @@ class AdministrateurAdmin(UserAdmin):
             'fields': ('nom', 'telephone', 'rib', 'date_creation')
         }),
     )
-    list_display = ('username', 'email', 'nom', 'rib', 'date_creation')
+    list_display = ('username', 'email', 'nom', 'telephone', 'rib', 'date_creation')
     list_filter = ('date_creation',)
     search_fields = ('username', 'email', 'nom', 'first_name', 'last_name')
     readonly_fields = ('date_creation',)
@@ -55,7 +55,7 @@ class LocataireAdmin(UserAdmin):
             'fields': ('nom', 'telephone', 'date_debut_contrat', 'caution', 'date_creation')
         }),
     )
-    list_display = ('username', 'email', 'nom', 'date_debut_contrat', 'caution')
+    list_display = ('username', 'email', 'nom', 'telephone', 'date_debut_contrat', 'caution')
     list_filter = ('date_debut_contrat', 'date_creation')
     search_fields = ('username', 'email', 'nom', 'first_name', 'last_name')
     readonly_fields = ('date_creation',)
