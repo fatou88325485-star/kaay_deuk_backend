@@ -8,10 +8,12 @@ from datetime import datetime
 
 class Utilisateur(AbstractUser):
     """Classe de base pour tous les utilisateurs du système"""
+    email = models.EmailField(unique=True)  # Override AbstractUser email pour le rendre unique
     nom = models.CharField(max_length=100, blank=True)
     telephone = models.CharField(max_length=20, blank=True)
     type_utilisateur = models.CharField(max_length=30, default="chercheur")
     date_creation = models.DateTimeField(auto_now_add=True)
+    # Note: Le mot de passe (password) est hérité de AbstractUser et géré par Django
     
     class Meta:
         verbose_name = "Utilisateur"
